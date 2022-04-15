@@ -18,16 +18,29 @@ button {
   background: white;
   border: none;
   cursor: pointer;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   border-radius: 50px;
   transition: 0.5s;
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 button:hover {
   background-color: black;
   color: white;
   transition: 0.5s;
 }
-li{
+li {
   margin-top: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f7f4f35b;
+  border-radius: 20px;
 }
