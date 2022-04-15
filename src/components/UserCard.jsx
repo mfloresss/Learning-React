@@ -35,7 +35,7 @@ export default function UserCard() {
       {userVerified ? (
         <div
           style={{
-            height: "800px",
+            height: "80%",
             width: "30%",
             display: "flex",
             flexDirection: "column",
@@ -49,27 +49,35 @@ export default function UserCard() {
             <h1>
               {user.name.first} {user.name.last}
             </h1>
-            <img style={{ width: "200px" }} src={user.picture.large} />
+            <img style={{ width: "150px" }} src={user.picture.large} />
           </header>
-          <section style={styles}>
-            <h2>Localitation</h2>
-            <ul>
-              <li>Street number: {user.location.street.number}</li>
-              <li>Street name: {user.location.street.name}</li>
-              <li>City: {user.location.city}</li>
-              <li>State: {user.location.state}</li>
-              <li>Contry: {user.location.country}</li>
-            </ul>
-          </section>
-          <section style={styles}>
-            <h2>Contact</h2>
-            <ul>
-              <li>{user.email}</li>
-              <li>Phone: {user.phone}</li>
-              <li>Cell: {user.cell}</li>
-            </ul>
-          </section>
-          <button onClick={updateUser}>Another user</button>
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "space-evenly",
+            }}
+          >
+            <section style={styles}>
+              <h2 style={{ fontSize: "20px" }}>Localitation</h2>
+              <ul style={{ fontSize: "10px" }}>
+                <li>City: {user.location.city}</li>
+                <li>State: {user.location.state}</li>
+                <li>Contry: {user.location.country}</li>
+              </ul>
+            </section>
+            <section style={styles}>
+              <h2 style={{ fontSize: "20px" }}>Contact</h2>
+              <ul style={{ fontSize: "10px" }}>
+                <li>{user.email}</li>
+                <li>Phone: {user.phone}</li>
+                <li>Cell: {user.cell}</li>
+              </ul>
+            </section>
+          </div>
+          <button style={{ padding: "10px 20px" }} onClick={updateUser}>
+            Another user
+          </button>
         </div>
       ) : (
         <h1>Loading....</h1>
