@@ -25,7 +25,9 @@ export default function UserCard() {
   };
 
   useEffect(() => {
-    updateUser();
+    (async () => {
+      await updateUser();
+    })();
   }, []);
 
   return (
@@ -40,6 +42,7 @@ export default function UserCard() {
             alignItems: "center",
             justifyContent: "space-evenly",
             backgroundColor: "#F24333",
+            borderRadius: "20px",
           }}
         >
           <header style={styles}>

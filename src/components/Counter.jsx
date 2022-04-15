@@ -13,6 +13,7 @@ function Counter() {
         alignItems: "center",
         justifyContent: "space-around",
         backgroundColor: "#F24333",
+        borderRadius: "20px"
       }}
     >
       <h1 style={{ fontSize: "50px" }}>useState Example</h1>
